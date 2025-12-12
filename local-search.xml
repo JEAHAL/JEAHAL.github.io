@@ -4,48 +4,23 @@
   
   
   <entry>
-    <title>12号测试文章</title>
+    <title>12月12日报</title>
     <link href="/2025/12/12/12%E5%8F%B7%E6%B5%8B%E8%AF%95%E6%96%87%E7%AB%A0/"/>
     <url>/2025/12/12/12%E5%8F%B7%E6%B5%8B%E8%AF%95%E6%96%87%E7%AB%A0/</url>
     
-    <content type="html"><![CDATA[<p>12月12日测试文章</p><img src="/2025/12/12/12%E5%8F%B7%E6%B5%8B%E8%AF%95%E6%96%87%E7%AB%A0/test.png" class="" title="图片引用方法一"><p>完成博客搭建与编写</p>]]></content>
+    <content type="html"><![CDATA[<p>1.完成技术博客的搭建，如下所示</p><img src="/2025/12/12/12%E5%8F%B7%E6%B5%8B%E8%AF%95%E6%96%87%E7%AB%A0/blog.png" class="" title="博客演示图"><p>主要难点如下：</p><p>（1）在界面显示访问量未实现</p><p>（2）渲染问题（后续解决，实际上是浏览器缓存导致的）</p>]]></content>
     
     
     <categories>
       
-      <category>Python</category>
+      <category>技术</category>
       
     </categories>
     
     
     <tags>
       
-      <tag>转载</tag>
-      
-    </tags>
-    
-  </entry>
-  
-  
-  
-  <entry>
-    <title>测试文章</title>
-    <link href="/2025/06/10/%E6%B5%8B%E8%AF%95%E6%96%87%E7%AB%A0/"/>
-    <url>/2025/06/10/%E6%B5%8B%E8%AF%95%E6%96%87%E7%AB%A0/</url>
-    
-    <content type="html"><![CDATA[<p>这是一篇测试文章</p><img src="/2025/06/10/%E6%B5%8B%E8%AF%95%E6%96%87%E7%AB%A0/test.png" class="" title="图片引用方法一">]]></content>
-    
-    
-    <categories>
-      
-      <category>Java</category>
-      
-    </categories>
-    
-    
-    <tags>
-      
-      <tag>原创</tag>
+      <tag>日报</tag>
       
     </tags>
     
