@@ -8,7 +8,7 @@
     <link href="/2025/12/12/12%E5%8F%B7%E6%B5%8B%E8%AF%95%E6%96%87%E7%AB%A0/"/>
     <url>/2025/12/12/12%E5%8F%B7%E6%B5%8B%E8%AF%95%E6%96%87%E7%AB%A0/</url>
     
-    <content type="html"><![CDATA[<p>1.完成技术博客的搭建，如下所示</p><img src="/2025/12/12/12%E5%8F%B7%E6%B5%8B%E8%AF%95%E6%96%87%E7%AB%A0/blog.png" class="" title="博客演示图"><p>主要难点如下：</p><p>（1）在界面显示访问量未实现</p><p>（2）渲染问题（后续解决，实际上是浏览器缓存导致的）</p>]]></content>
+    <content type="html"><![CDATA[<p>1.完成技术博客的搭建，如下所示</p><img src="/2025/12/12/12%E5%8F%B7%E6%B5%8B%E8%AF%95%E6%96%87%E7%AB%A0/blog.png" class="" title="博客演示图"><p>主要难点如下：</p><p>（1）在界面显示访问量未实现</p><p>（2）渲染问题（后续解决，实际上是浏览器缓存导致的）</p><p>2.大模型（附long-chain）</p><p>MCP（大模型上下文协议 - 工具装的统一接口）</p><p>RAG（检索增强生成）-&gt; 向量相似度检索 -&gt; LLM大模型 &#x3D;&gt; dify , Fastgpt…</p><img src="/2025/12/12/12%E5%8F%B7%E6%B5%8B%E8%AF%95%E6%96%87%E7%AB%A0/RAG.png" class="" title="RAG演示图"><p>Langchain：较为灵活的大模型工具（比之dify？但是用起来不够简化）</p>]]></content>
     
     
     <categories>
