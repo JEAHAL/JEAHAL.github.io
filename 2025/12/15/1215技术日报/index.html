@@ -19,15 +19,15 @@
   <meta name="author" content="JHao">
   <meta name="keywords" content="">
   
-    <meta name="description" content="1.预期目标：利用爬虫对特定网站数据进行拔取作为原始数据集，采用该数据集融合测试ai生成样例，并通过样例进行提问（GAN） 爬虫代码块如下：（根据另一篇博客改） 头文件1234from bs4 import BeautifulSoup  # 网页解析，获取数据import re  # 正则表达式，进行文字匹配import urllib.request, urllib.error  # 制定URL，">
+    <meta name="description" content="1.预期目标：利用爬虫对特定网站数据进行拔取作为原始数据集，采用该数据集融合测试ai生成样例，并通过样例进行提问（GAN）爬虫代码块如下：（根据另一篇博客改） 头文件1234from bs4 import BeautifulSoup  # 网页解析，获取数据import re  # 正则表达式，进行文字匹配import urllib.request, urllib.error  # 制定URL，获">
 <meta property="og:type" content="article">
 <meta property="og:title" content="1215技术日报">
 <meta property="og:url" content="https://jeahal.github.io/2025/12/15/1215%E6%8A%80%E6%9C%AF%E6%97%A5%E6%8A%A5/index.html">
 <meta property="og:site_name" content="JHao">
-<meta property="og:description" content="1.预期目标：利用爬虫对特定网站数据进行拔取作为原始数据集，采用该数据集融合测试ai生成样例，并通过样例进行提问（GAN） 爬虫代码块如下：（根据另一篇博客改） 头文件1234from bs4 import BeautifulSoup  # 网页解析，获取数据import re  # 正则表达式，进行文字匹配import urllib.request, urllib.error  # 制定URL，">
+<meta property="og:description" content="1.预期目标：利用爬虫对特定网站数据进行拔取作为原始数据集，采用该数据集融合测试ai生成样例，并通过样例进行提问（GAN）爬虫代码块如下：（根据另一篇博客改） 头文件1234from bs4 import BeautifulSoup  # 网页解析，获取数据import re  # 正则表达式，进行文字匹配import urllib.request, urllib.error  # 制定URL，获">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2025-12-15T01:15:41.000Z">
-<meta property="article:modified_time" content="2025-12-15T02:14:03.547Z">
+<meta property="article:modified_time" content="2025-12-15T02:58:15.539Z">
 <meta property="article:author" content="JHao">
 <meta property="article:tag" content="日报">
 <meta name="twitter:card" content="summary_large_image">
@@ -244,7 +244,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          1.3k 字
+          1.5k 字
         
       </span>
     
@@ -255,7 +255,7 @@
         
         
         
-          11 分钟
+          13 分钟
         
       </span>
     
@@ -306,8 +306,7 @@
             
               <div class="markdown-body">
                 
-                <p>1.预期目标：利用爬虫对特定网站数据进行拔取作为原始数据集，采用该数据集融合测试ai生成样例，并通过样例进行提问（GAN）</p>
-<p>爬虫代码块如下：（根据另一篇博客改）</p>
+                <h1 id="1-预期目标：利用爬虫对特定网站数据进行拔取作为原始数据集，采用该数据集融合测试ai生成样例，并通过样例进行提问（GAN）"><a href="#1-预期目标：利用爬虫对特定网站数据进行拔取作为原始数据集，采用该数据集融合测试ai生成样例，并通过样例进行提问（GAN）" class="headerlink" title="1.预期目标：利用爬虫对特定网站数据进行拔取作为原始数据集，采用该数据集融合测试ai生成样例，并通过样例进行提问（GAN）"></a>1.预期目标：利用爬虫对特定网站数据进行拔取作为原始数据集，采用该数据集融合测试ai生成样例，并通过样例进行提问（GAN）</h1><p>爬虫代码块如下：（根据另一篇博客改）</p>
 <h1 id="头文件"><a href="#头文件" class="headerlink" title="头文件"></a>头文件</h1><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-keyword">from</span> bs4 <span class="hljs-keyword">import</span> BeautifulSoup  <span class="hljs-comment"># 网页解析，获取数据</span><br><span class="hljs-keyword">import</span> re  <span class="hljs-comment"># 正则表达式，进行文字匹配</span><br><span class="hljs-keyword">import</span> urllib.request, urllib.error  <span class="hljs-comment"># 制定URL，获取网页数据</span><br><span class="hljs-keyword">import</span> xlwt  <span class="hljs-comment"># 进行excel操作</span><br></code></pre></td></tr></table></figure>
 
 <h1 id="正则化保证获取对应格式内容"><a href="#正则化保证获取对应格式内容" class="headerlink" title="正则化保证获取对应格式内容"></a>正则化保证获取对应格式内容</h1><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs python">findLink = re.<span class="hljs-built_in">compile</span>(<span class="hljs-string">r&#x27;&lt;a href=&quot;(.*?)&quot;&gt;&#x27;</span>)  <span class="hljs-comment"># 影片详情链接的规则</span><br>findImgSrc = re.<span class="hljs-built_in">compile</span>(<span class="hljs-string">r&#x27;&lt;img.*?src=&quot;(.*?)&quot;&#x27;</span>, re.S)  <span class="hljs-comment"># 修复正则表达式，添加非贪婪匹配</span><br>findTitle = re.<span class="hljs-built_in">compile</span>(<span class="hljs-string">r&#x27;&lt;span class=&quot;title&quot;&gt;(.*?)&lt;/span&gt;&#x27;</span>, re.S)  <span class="hljs-comment"># 添加非贪婪匹配和re.S</span><br>findRating = re.<span class="hljs-built_in">compile</span>(<span class="hljs-string">r&#x27;&lt;span class=&quot;rating_num&quot; property=&quot;v:average&quot;&gt;(.*?)&lt;/span&gt;&#x27;</span>)  <span class="hljs-comment"># 添加非贪婪匹配</span><br>findJudge = re.<span class="hljs-built_in">compile</span>(<span class="hljs-string">r&#x27;&lt;span&gt;(\d+)人评价&lt;/span&gt;&#x27;</span>)<br>findInq = re.<span class="hljs-built_in">compile</span>(<span class="hljs-string">r&#x27;&lt;span class=&quot;inq&quot;&gt;(.*?)&lt;/span&gt;&#x27;</span>, re.S)  <span class="hljs-comment"># 添加非贪婪匹配和re.S</span><br>findBd = re.<span class="hljs-built_in">compile</span>(<span class="hljs-string">r&#x27;&lt;p class=&quot;&quot;&gt;(.*?)&lt;/p&gt;&#x27;</span>, re.S)<br></code></pre></td></tr></table></figure>
@@ -322,8 +321,8 @@
 
 
 
-
-<div id="doc-je0z0ix7v" 
+<h1 id="文档在线预览工具（有点问题，无法调取本地文件资源，后续修改）"><a href="#文档在线预览工具（有点问题，无法调取本地文件资源，后续修改）" class="headerlink" title="文档在线预览工具（有点问题，无法调取本地文件资源，后续修改）"></a>文档在线预览工具（有点问题，无法调取本地文件资源，后续修改）</h1>
+<div id="doc-8d5afl137" 
      data-doc-viewer="true"
      data-file-url="D:\blog\hexo-blog\source\_posts\1215技术日报"
      data-file-type="xls'doubanTop250.xls'"
@@ -334,8 +333,21 @@
 
 
 
+<h1 id="2-利用大模型进行生成对抗样例生成"><a href="#2-利用大模型进行生成对抗样例生成" class="headerlink" title="2.利用大模型进行生成对抗样例生成"></a>2.利用大模型进行生成对抗样例生成</h1><blockquote>
+<p>整体思路如下：</p>
+<p>1.爬虫获取数据模拟得到的数据</p>
+<p>2.首先利用生成器对XLS中特定领域进行分析</p>
+<p>2.召回率怎么实现呢？引入第3个大模型对两个模型的提示词及最终答案进行评分？</p>
+<p>3.将评分高的问题输出</p>
+</blockquote>
+<p>模型如下：</p>
 
 
+<p>测试如下:</p>
+<p>着重对回答：</p>
+
+
+<p>对两者回答：</p>
 
                 
               </div>
