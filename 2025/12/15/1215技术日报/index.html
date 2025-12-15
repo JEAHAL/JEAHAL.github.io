@@ -19,27 +19,24 @@
   <meta name="author" content="JHao">
   <meta name="keywords" content="">
   
-    <meta name="description" content="1.完成技术博客的搭建，如下所示   主要难点如下： （1）在界面显示访问量未实现 （2）渲染问题（后续解决，实际上是浏览器缓存导致的） 2.大模型（附long-chain） MCP（大模型上下文协议 - 工具装的统一接口） RAG（检索增强生成）-&gt; 向量相似度检索 -&gt; LLM大模型 &#x3D;&gt; dify , Fastgpt…   Langchain：较为灵活的大模型工具">
+    <meta name="description" content="1.预期目标：利用爬虫对特定网站数据进行拔取作为原始数据集，采用该数据集融合测试ai生成样例，并通过样例进行提问（GAN） 爬虫代码块如下：（根据另一篇博客改） coding &#x3D; utf-8if not html:  # 如果获取不到网页内容，跳过        print(f”第{i+1}页爬取失败，跳过”)        continue # 2.逐一解析数据 soup &#x3D; Beau">
 <meta property="og:type" content="article">
-<meta property="og:title" content="12月12日报">
-<meta property="og:url" content="https://jeahal.github.io/2025/12/12/12%E5%8F%B7%E6%B5%8B%E8%AF%95%E6%96%87%E7%AB%A0/index.html">
+<meta property="og:title" content="1215技术日报">
+<meta property="og:url" content="https://jeahal.github.io/2025/12/15/1215%E6%8A%80%E6%9C%AF%E6%97%A5%E6%8A%A5/index.html">
 <meta property="og:site_name" content="JHao">
-<meta property="og:description" content="1.完成技术博客的搭建，如下所示   主要难点如下： （1）在界面显示访问量未实现 （2）渲染问题（后续解决，实际上是浏览器缓存导致的） 2.大模型（附long-chain） MCP（大模型上下文协议 - 工具装的统一接口） RAG（检索增强生成）-&gt; 向量相似度检索 -&gt; LLM大模型 &#x3D;&gt; dify , Fastgpt…   Langchain：较为灵活的大模型工具">
+<meta property="og:description" content="1.预期目标：利用爬虫对特定网站数据进行拔取作为原始数据集，采用该数据集融合测试ai生成样例，并通过样例进行提问（GAN） 爬虫代码块如下：（根据另一篇博客改） coding &#x3D; utf-8if not html:  # 如果获取不到网页内容，跳过        print(f”第{i+1}页爬取失败，跳过”)        continue # 2.逐一解析数据 soup &#x3D; Beau">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://jeahal.github.io/2025/12/12/12%E5%8F%B7%E6%B5%8B%E8%AF%95%E6%96%87%E7%AB%A0/blog.png">
-<meta property="og:image" content="https://jeahal.github.io/2025/12/12/12%E5%8F%B7%E6%B5%8B%E8%AF%95%E6%96%87%E7%AB%A0/RAG.png">
-<meta property="article:published_time" content="2025-12-12T03:01:01.000Z">
-<meta property="article:modified_time" content="2025-12-12T07:42:42.022Z">
+<meta property="article:published_time" content="2025-12-15T01:15:41.000Z">
+<meta property="article:modified_time" content="2025-12-15T01:48:43.891Z">
 <meta property="article:author" content="JHao">
 <meta property="article:tag" content="日报">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:image" content="https://jeahal.github.io/2025/12/12/12%E5%8F%B7%E6%B5%8B%E8%AF%95%E6%96%87%E7%AB%A0/blog.png">
   
   
     <meta name="referrer" content="no-referrer-when-downgrade">
   
   
-  <title>12月12日报 - JHao</title>
+  <title>1215技术日报 - JHao</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -218,7 +215,7 @@
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle" data-typed-text="12月12日报"></span>
+            <span id="subtitle" data-typed-text="1215技术日报"></span>
           
         </div>
 
@@ -234,8 +231,8 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2025-12-12 11:01" pubdate>
-          2025年12月12日 上午
+        <time datetime="2025-12-15 09:15" pubdate>
+          2025年12月15日 上午
         </time>
       </span>
     
@@ -246,7 +243,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          124 字
+          1.3k 字
         
       </span>
     
@@ -257,7 +254,7 @@
         
         
         
-          2 分钟
+          11 分钟
         
       </span>
     
@@ -303,23 +300,134 @@
       <div class="container nopadding-x-md" id="board-ctn">
         <div id="board">
           <article class="post-content mx-auto">
-            <h1 id="seo-header">12月12日报</h1>
+            <h1 id="seo-header">1215技术日报</h1>
             
             
               <div class="markdown-body">
                 
-                <p>1.完成技术博客的搭建，如下所示</p>
-<img src="/2025/12/12/12%E5%8F%B7%E6%B5%8B%E8%AF%95%E6%96%87%E7%AB%A0/blog.png" srcset="/img/loading.gif" lazyload class="" title="博客演示图">
+                <p>1.预期目标：利用爬虫对特定网站数据进行拔取作为原始数据集，采用该数据集融合测试ai生成样例，并通过样例进行提问（GAN）</p>
+<p>爬虫代码块如下：（根据另一篇博客改）</p>
+<h1 id="coding-utf-8"><a href="#coding-utf-8" class="headerlink" title="coding &#x3D; utf-8"></a>coding &#x3D; utf-8</h1><p>if not html:  # 如果获取不到网页内容，跳过<br>        print(f”第{i+1}页爬取失败，跳过”)<br>        continue</p>
+<pre><code class="hljs"># 2.逐一解析数据
+soup = BeautifulSoup(html, &quot;html.parser&quot;)
+items = soup.find_all(&#39;div&#39;, class_=&quot;item&quot;)  # 查找符合要求的字符串
+</code></pre>
+<p>from bs4 import BeautifulSoup  # 网页解析，获取数据<br>import re  # 正则表达式，进行文字匹配<br>import urllib.request, urllib.error  # 制定URL，获取网页数据<br>import xlwt  # 进行excel操作<br>#import sqlite3  # 进行SQLite数据库操作</p>
+<h1 id="优化正则表达式，提高匹配成功率"><a href="#优化正则表达式，提高匹配成功率" class="headerlink" title="优化正则表达式，提高匹配成功率"></a>优化正则表达式，提高匹配成功率</h1><p>findLink &#x3D; re.compile(r’<a href="(.*?)">‘)  # 影片详情链接的规则<br>findImgSrc &#x3D; re.compile(r’&lt;img.<em>?src&#x3D;”(.*?)”‘, re.S)  # 修复正则表达式，添加非贪婪匹配<br>findTitle &#x3D; re.compile(r’<span class="title">(.</em>?)</span>‘, re.S)  # 添加非贪婪匹配和re.S<br>findRating &#x3D; re.compile(r’<span class="rating_num" property="v:average">(.<em>?)</span>‘)  # 添加非贪婪匹配<br>findJudge &#x3D; re.compile(r’<span>(\d+)人评价</span>‘)<br>findInq &#x3D; re.compile(r’<span class="inq">(.</em>?)</span>‘, re.S)  # 添加非贪婪匹配和re.S<br>findBd &#x3D; re.compile(r’<p class="">(.*?)</p>‘, re.S)</p>
+<p>def main():<br>    baseurl &#x3D; “https://movie.douban.com/top250?start="  # 要爬取的网页链接<br>    # 1.爬取网页<br>​    datalist &#x3D; getData(baseurl)<br>​    savepath &#x3D; “doubanTop250.xls”    # 当前目录新建XLS，存储进去<br>    # dbpath &#x3D; “movie.db”              # 当前目录新建数据库，存储进去<br>    # 3.保存数据<br>​    if datalist:  # 只有当数据存在时才保存<br>​        saveData(datalist, savepath)      # 2种存储方式可以只选择一种<br>        # saveData2DB(datalist,dbpath)<br>​        print(“爬取完毕！”)<br>​    else:<br>​        print(“未获取到有效数据！”)</p>
+<h1 id="爬取网页"><a href="#爬取网页" class="headerlink" title="爬取网页"></a>爬取网页</h1><p>def getData(baseurl):<br>    datalist &#x3D; []  # 用来存储爬取的网页信息<br>    for i in range(0, 10):  # 调用获取页面信息的函数，10次<br>        url &#x3D; baseurl + str(i * 25)<br>        print(f”正在爬取第{i+1}页：{url}”)<br>        html &#x3D; askURL(url)  # 保存获取到的网页源码</p>
+<pre><code class="hljs">    if not html:  # 如果获取不到网页内容，跳过
+        print(f&quot;第&#123;i+1&#125;页爬取失败，跳过&quot;)
+        continue
+        
+    # 2.逐一解析数据
+    soup = BeautifulSoup(html, &quot;html.parser&quot;)
+    items = soup.find_all(&#39;div&#39;, class_=&quot;item&quot;)  # 查找符合要求的字符串
+    
+    if not items:  # 如果没有找到电影条目，跳过
+        print(f&quot;第&#123;i+1&#125;页没有找到电影条目，跳过&quot;)
+        continue
+        
+    for item in items:
+        data = []  # 保存一部电影所有信息
+        item_str = str(item)  # 避免变量名冲突
+        
+        # 解析电影详情链接
+        link_list = re.findall(findLink, item_str)
+        link = link_list[0] if link_list else &quot;&quot;
+        data.append(link)
+        
+        # 解析图片链接
+        imgSrc_list = re.findall(findImgSrc, item_str)
+        imgSrc = imgSrc_list[0] if imgSrc_list else &quot;&quot;
+        data.append(imgSrc)
+        
+        # 解析影片标题
+        titles = re.findall(findTitle, item_str)
+        if len(titles) == 2:
+            ctitle = titles[0].strip()
+            data.append(ctitle)
+            otitle = titles[1].replace(&quot;/&quot;, &quot;&quot;).strip()  # 消除转义字符
+            data.append(otitle)
+        elif len(titles) == 1:
+            data.append(titles[0].strip())
+            data.append(&#39; &#39;)
+        else:
+            data.append(&#39; &#39;)
+            data.append(&#39; &#39;)
+        
+        # 解析评分
+        rating_list = re.findall(findRating, item_str)
+        rating = rating_list[0] if rating_list else &quot;0&quot;
+        data.append(rating)
+        
+        # 解析评价数
+        judgeNum_list = re.findall(findJudge, item_str)
+        judgeNum = judgeNum_list[0] if judgeNum_list else &quot;0&quot;
+        data.append(judgeNum)
+        
+        # 解析概况
+        inq_list = re.findall(findInq, item_str)
+        if inq_list:
+            inq = inq_list[0].replace(&quot;。&quot;, &quot;&quot;).strip()
+            data.append(inq)
+        else:
+            data.append(&quot; &quot;)
+        
+        # 解析相关信息（修复这里的IndexError）
+        bd_list = re.findall(findBd, item_str)
+        if bd_list:
+            bd = bd_list[0]
+            bd = re.sub(&#39;&lt;br(\s+)?/&gt;(\s+)?&#39;, &quot;&quot;, bd)  # 去除br标签
+            bd = re.sub(&#39;/&#39;, &quot;&quot;, bd)  # 去除/符号
+            bd = re.sub(&#39;\s+&#39;, &#39; &#39;, bd)  # 多个空格替换为单个空格
+            data.append(bd.strip())
+        else:
+            data.append(&quot; &quot;)
+        
+        # 只有当数据完整时才添加（至少有中文名和评分）
+        if data[2] and data[4] != &quot;0&quot;:
+            datalist.append(data)
 
-<p>主要难点如下：</p>
-<p>（1）在界面显示访问量未实现</p>
-<p>（2）渲染问题（后续解决，实际上是浏览器缓存导致的）</p>
-<p>2.大模型（附long-chain）</p>
-<p>MCP（大模型上下文协议 - 工具装的统一接口）</p>
-<p>RAG（检索增强生成）-&gt; 向量相似度检索 -&gt; LLM大模型 &#x3D;&gt; dify , Fastgpt…</p>
-<img src="/2025/12/12/12%E5%8F%B7%E6%B5%8B%E8%AF%95%E6%96%87%E7%AB%A0/RAG.png" srcset="/img/loading.gif" lazyload class="" title="RAG演示图">
-
-<p>Langchain：较为灵活的大模型工具（比之dify？但是用起来不够简化）</p>
+print(f&quot;共爬取到&#123;len(datalist)&#125;部电影数据&quot;)
+return datalist
+</code></pre>
+<h1 id="得到指定一个URL的网页内容"><a href="#得到指定一个URL的网页内容" class="headerlink" title="得到指定一个URL的网页内容"></a>得到指定一个URL的网页内容</h1><p>def askURL(url):<br>    head &#x3D; {  # 模拟浏览器头部信息，向豆瓣服务器发送消息<br>        “User-Agent”: “Mozilla&#x2F;5.0 (Windows NT 10.0; Win64; x64) AppleWebKit&#x2F;537.36 (KHTML, like Gecko) Chrome&#x2F;120.0.0.0 Safari&#x2F;537.36”,<br>        “Accept”: “text&#x2F;html,application&#x2F;xhtml+xml,application&#x2F;xml;q&#x3D;0.9,image&#x2F;webp,<em>&#x2F;</em>;q&#x3D;0.8”,<br>        “Accept-Language”: “zh-CN,zh;q&#x3D;0.9,en;q&#x3D;0.8”,<br>        “Referer”: “https://movie.douban.com/"<br>    }<br>    # 用户代理，表示告诉豆瓣服务器，我们是什么类型的机器、浏览器</p>
+<pre><code class="hljs">request = urllib.request.Request(url, headers=head)
+html = &quot;&quot;
+try:
+    response = urllib.request.urlopen(request, timeout=30)  # 添加超时设置
+    html = response.read().decode(&quot;utf-8&quot;)
+except urllib.error.URLError as e:
+    if hasattr(e, &quot;code&quot;):
+        print(f&quot;HTTP错误代码：&#123;e.code&#125;&quot;)
+    if hasattr(e, &quot;reason&quot;):
+        print(f&quot;错误原因：&#123;e.reason&#125;&quot;)
+except Exception as e:
+    print(f&quot;获取网页内容时发生错误：&#123;str(e)&#125;&quot;)
+return html
+</code></pre>
+<h1 id="保存数据到表格"><a href="#保存数据到表格" class="headerlink" title="保存数据到表格"></a>保存数据到表格</h1><p>def saveData(datalist, savepath):<br>    print(“正在保存数据…”)<br>    try:<br>        book &#x3D; xlwt.Workbook(encoding&#x3D;”utf-8”, style_compression&#x3D;0)  # 创建workbook对象<br>        sheet &#x3D; book.add_sheet(‘豆瓣电影Top250’, cell_overwrite_ok&#x3D;True)  # 创建工作表<br>        col &#x3D; (“电影详情链接”, “图片链接”, “影片中文名”, “影片外国名”, “评分”, “评价数”, “概况”, “相关信息”)</p>
+<pre><code class="hljs">    # 写入列名
+    for i in range(0, 8):
+        sheet.write(0, i, col[i])
+    
+    # 写入数据
+    for i in range(len(datalist)):
+        data = datalist[i]
+        for j in range(0, 8):
+            # 确保数据不会超出单元格限制
+            if j &lt; len(data):
+                sheet.write(i + 1, j, data[j][:32767] if isinstance(data[j], str) else data[j])  # 限制字符串长度
+            else:
+                sheet.write(i + 1, j, &quot;&quot;)
+    
+    book.save(savepath)
+    print(f&quot;数据已成功保存到：&#123;savepath&#125;&quot;)
+except Exception as e:
+    print(f&quot;保存数据时发生错误：&#123;str(e)&#125;&quot;)
+</code></pre>
+<p>if <strong>name</strong> &#x3D;&#x3D; “<strong>main</strong>“:  # 当程序执行时<br>    # 调用函数<br>​    main()</p>
 
                 
               </div>
@@ -361,53 +469,6 @@
 
 
               
-  
-
-  <div class="license-box my-3">
-    <div class="license-title">
-      <div>12月12日报</div>
-      <div>https://jeahal.github.io/2025/12/12/12号测试文章/</div>
-    </div>
-    <div class="license-meta">
-      
-        <div class="license-meta-item">
-          <div>作者</div>
-          <div>JHao</div>
-        </div>
-      
-      
-        <div class="license-meta-item license-meta-date">
-          <div>发布于</div>
-          <div>2025年12月12日</div>
-        </div>
-      
-      
-        <div class="license-meta-item license-meta-date">
-          <div>更新于</div>
-          <div>2025年12月12日</div>
-        </div>
-      
-      
-        <div class="license-meta-item">
-          <div>许可协议</div>
-          <div>
-            
-              
-              
-                <a class="print-no-link" target="_blank" href="https://creativecommons.org/licenses/by/4.0/">
-                  <span class="hint--top hint--rounded" aria-label="BY - 署名">
-                    <i class="iconfont icon-cc-by"></i>
-                  </span>
-                </a>
-              
-            
-          </div>
-        </div>
-      
-    </div>
-    <div class="license-icon iconfont"></div>
-  </div>
-
 
 
               
@@ -415,15 +476,15 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/2025/12/15/1215%E6%8A%80%E6%9C%AF%E6%97%A5%E6%8A%A5/" title="1215技术日报">
-                        <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">1215技术日报</span>
-                        <span class="visible-mobile">上一篇</span>
-                      </a>
-                    
                   </article>
                   <article class="post-next col-6">
                     
+                    
+                      <a href="/2025/12/12/12%E5%8F%B7%E6%B5%8B%E8%AF%95%E6%96%87%E7%AB%A0/" title="12月12日报">
+                        <span class="hidden-mobile">12月12日报</span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
                     
                   </article>
                 </div>
