@@ -32,7 +32,7 @@
 <meta property="og:image" content="https://jeahal.github.io/2025/12/12/12%E5%8F%B7%E6%B5%8B%E8%AF%95%E6%96%87%E7%AB%A0/dify_api.png">
 <meta property="og:image" content="https://jeahal.github.io/2025/12/12/12%E5%8F%B7%E6%B5%8B%E8%AF%95%E6%96%87%E7%AB%A0/file_upload.png">
 <meta property="article:published_time" content="2025-12-15T01:15:41.000Z">
-<meta property="article:modified_time" content="2025-12-15T07:38:58.222Z">
+<meta property="article:modified_time" content="2025-12-15T08:12:56.532Z">
 <meta property="article:author" content="JHao">
 <meta property="article:tag" content="日报">
 <meta name="twitter:card" content="summary_large_image">
@@ -249,7 +249,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          2.7k 字
+          3.7k 字
         
       </span>
     
@@ -260,7 +260,7 @@
         
         
         
-          23 分钟
+          31 分钟
         
       </span>
     
@@ -350,11 +350,36 @@
 <p>主要难点在于接口调用一直有问题，（上传文件没问题，在平台运行也没问题，就是从网站get回答一直有问题）后续利用大模型实现代码修改，但后续代码仍然需要简化。</p>
 <p>测试结果如下所示,所用大模型为2中提到的大模型</p>
 <p><img src="/2025/12/12/12%E5%8F%B7%E6%B5%8B%E8%AF%95%E6%96%87%E7%AB%A0/file_upload.png" srcset="/img/loading.gif" lazyload alt="upload_file"></p>
+<p>从该流程能够判断先后关系如下，首先上传文件至服务器分支，得到文件id号，之后工作流根据文件ID获取上传文件进行后续分析。</p>
 <h1 id="4-网络状态"><a href="#4-网络状态" class="headerlink" title="4.网络状态"></a>4.网络状态</h1><p>100-200 消息响应</p>
 <p>200-300 状态正常</p>
 <p>300-400 资源重定向</p>
 <p>400-500 客户端错误</p>
 <p>500-600 服务端错误</p>
+<h1 id="5-后续"><a href="#5-后续" class="headerlink" title="5.后续"></a>5.后续</h1><h2 id="5-1-能否封装成app直接供安卓软件使用？"><a href="#5-1-能否封装成app直接供安卓软件使用？" class="headerlink" title="5.1 能否封装成app直接供安卓软件使用？"></a>5.1 能否封装成app直接供安卓软件使用？</h2><h2 id="5-2-Agent学习相关"><a href="#5-2-Agent学习相关" class="headerlink" title="5.2 Agent学习相关"></a>5.2 Agent学习相关</h2><ol>
+<li><strong>入门（1-3 个月）</strong>：<ul>
+<li>掌握 Python 基础 + 后端开发（Flask&#x2F;FastAPI）；</li>
+<li>熟悉 LLM 调用（OpenAI API、通义千问 API）；</li>
+<li>用 LangChain 搭建简单 Agent（如 “调用天气 API 回答天气”）；</li>
+</ul>
+</li>
+<li><strong>进阶（3-6 个月）</strong>：<ul>
+<li>深入学习 LangChain&#x2F;LlamaIndex 框架，实现复杂任务规划；</li>
+<li>掌握向量数据库使用（Pinecone&#x2F;Milvus），设计记忆系统；</li>
+<li>集成多种工具（如爬虫、Excel 解析、代码执行器）；</li>
+</ul>
+</li>
+<li><strong>高阶（6-12 个月）</strong>：<ul>
+<li>学习强化学习（RLHF），优化 Agent 决策逻辑；</li>
+<li>实现多 Agent 协作（如 “一个 Agent 负责数据采集，一个负责分析，一个负责输出报告”）；</li>
+<li>落地</li>
+</ul>
+</li>
+</ol>
+<h2 id="5-3-Agent招聘要求"><a href="#5-3-Agent招聘要求" class="headerlink" title="5.3 Agent招聘要求"></a>5.3 Agent招聘要求</h2><p>岗位职责 核心技术职责 - 多Agent架构设计：设计和实现分布式Agent协作框架，支持复杂业务场景 - 智能流程编排：开发动态流程编排引擎，实现Agent间的智能协调和任务分配 - 系统集成开发：将Agent系统与现有业务系统深度集成，确保无缝协作 - 性能优化调试：优化Agent系统的响应速度、并发能力和资源利用率 产品开发职责 - 业务场景建模：将复杂的贸易验真业务流程抽象为Agent协作模式 - 工具链开发：构建Agent开发、测试、部署的完整工具链 - 监控运维体系：建立Agent系统的实时监控、故障诊断和自动恢复机制 - 扩展性设计：确保系统架构支持业务快速扩展和新Agent的动态接入 技术创新职责 - 前沿技术研究：跟踪Agent领域最新技术，探索创新应用模式 - 算法优化改进：优化Agent决策算法、学习机制和协作策略 - 标准规范制定：制定团队的Agent开发标准和实践 - 技术分享培训：向团队分享Agent技术知识，提升整体技术水平 任职要求 必备技术背景 - 学历要求：本科及以上学历，计算机科学、软件工程、人工智能等相关专业 - 工作经验：5年以上复杂软件系统开发经验，其中至少2年Agent系统开发经验 - 核心技能：  - 精通Python等编程语言，具备高质量代码编写能力  - 深度理解Agent架构模式和多Agent协作机制  - 熟练掌握主流Agent框架（Dify、LangChain等） 复杂AI系统经验要求 - 多模型协作：设计过多个AI模型协同工作的复杂系统 - 实时AI应用：开发过对响应时间要求严格的AI应用系统 - 高并发AI服务：构建过支持高并发的AI推理服务架构 - AI工程化：具备完整的AI模型从训练到部署的工程化经验 多Agent架构技能 - Agent设计模式：熟悉Reactive、Deliberative、Hybrid等Agent架构 - 协作机制：掌握Contract Net、Blackboard、Auction等协作协议 - 通信协议：了解FIPA-ACL、KQML等Agent通信标准 - 决策算法：熟悉强化学习、博弈论、拍卖算法等决策机制 - 协调策略：具备任务分解、负载均衡、冲突解决等协调能力 业务理解要求 - 金融科技：了解支付、风控、合规等金融业务流程 - 工作流设计：能够将复杂业务流程建模为可执行的工作流 - 系统集成：具备与第三方系统集成的丰富经验</p>
+<h1 id="6-明日主要任务"><a href="#6-明日主要任务" class="headerlink" title="6 明日主要任务"></a>6 明日主要任务</h1><p>1.本地部署大模型</p>
+<p>2.将dify改成langChain（明日）</p>
+<p>3.将实现的功能利用FLASK及oneapi包装成一个可以使用的计费平台</p>
 
                 
               </div>
