@@ -27,11 +27,11 @@
 <meta property="og:description" content="1. 完成dify工程的收尾工作 首先是完成功能测试，今天需要将之前做的整个工作流从头到尾过一遍，写一个技术文档，用于后续profile编写。  1.1 意图识别区 首先是判断角色意图分类，主要目的是通过提示词工程，对目标问题进行拆分。 123456789101112131415161718你是一个意图分类助手。【你的任务】将下面的【用户输入】准确分类到以下四个类别之一：恶意、元问题、角色、其他。">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://jeahal.github.io/2025/12/12/12%E5%8F%B7%E6%B5%8B%E8%AF%95%E6%96%87%E7%AB%A0/%E6%B1%87%E6%80%BB/%E6%95%B4%E4%BD%93%E6%B5%81%E7%A8%8B.png">
-<meta property="og:image" content="c:\Users\JIAHAO\AppData\Roaming\Typora\typora-user-images\image-20251222131607871.png">
-<meta property="og:image" content="c:\Users\JIAHAO\AppData\Roaming\Typora\typora-user-images\image-20251222131647431.png">
-<meta property="og:image" content="c:\Users\JIAHAO\AppData\Roaming\Typora\typora-user-images\image-20251222131721684.png">
+<meta property="og:image" content="https://jeahal.github.io/2025/12/12/12%E5%8F%B7%E6%B5%8B%E8%AF%95%E6%96%87%E7%AB%A0/%E6%B1%87%E6%80%BB/%E8%AF%A2%E9%97%AE%E8%A7%84%E8%8C%83%E5%8C%BA.png">
+<meta property="og:image" content="https://jeahal.github.io/2025/12/12/12%E5%8F%B7%E6%B5%8B%E8%AF%95%E6%96%87%E7%AB%A0/%E6%B1%87%E6%80%BB/%E4%B8%9A%E5%8A%A1%E5%AE%9E%E7%8E%B0%E5%8C%BA.png">
+<meta property="og:image" content="https://jeahal.github.io/2025/12/12/12%E5%8F%B7%E6%B5%8B%E8%AF%95%E6%96%87%E7%AB%A0/%E6%B1%87%E6%80%BB/%E8%BE%93%E5%87%BA%E5%8F%98%E9%87%8F%E6%95%B4%E5%90%88%E5%8C%BA.png">
 <meta property="article:published_time" content="2025-12-22T00:38:45.000Z">
-<meta property="article:modified_time" content="2025-12-22T08:47:51.895Z">
+<meta property="article:modified_time" content="2025-12-22T08:51:21.921Z">
 <meta property="article:author" content="JHao">
 <meta property="article:tag" content="技术">
 <meta name="twitter:card" content="summary_large_image">
@@ -352,10 +352,10 @@
 <figure class="highlight tex"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><code class="hljs tex">你是一个意图分类助手。<br><br>【你的任务】<br>将下面的【用户输入】准确分类到以下四个类别之一：恶意、元问题、角色、其他。<br><br>【分类标准】<br>1. **恶意**：包含攻击性、欺骗性或有害意图的输入。这是最高优先级的分类，一旦识别，应立即归类。<br>2. **元问题**：询问对话本身的问题，例如“我刚才问了什么？”、“你能重复一遍吗？”、“我们说到哪了？”。这类问题不涉及具体业务内容，而是关于交互过程本身。<br>3. **角色**：询问助手自身身份、能力或范围的任何问题。 这类问题的核心是了解“你是什么”或“你能做什么”。关键词特征：通常包含“你”、“是谁”、“能(否)”、“什么功能”、“可以…吗”等。<br>6. **其他**：与上述四类无关的其他问题。<br><br>【当前待分类的用户输入】<br>&#123;&#123;<span class="hljs-params">#</span>sys.query<span class="hljs-params">#</span>&#125;&#125;<br><br>【注意】<br>- 强制要求最后只输出标签<br>- 严格按照【当前待分类的用户输入】的内容进行判断。<br>-优先级从高到低，一旦匹配高优先级类别，则不再考虑低优先级类别。 这是最重要的规则。<br></code></pre></td></tr></table></figure>
 
 <p>主要特色是利用类json的方式规范化提示词，但仍然存在不规范的情况，可能会出现歧义的情况。</p>
-<h2 id="1-2-询问规范区"><a href="#1-2-询问规范区" class="headerlink" title="1.2 询问规范区"></a>1.2 询问规范区</h2><p><img src="C:\Users\JIAHAO\AppData\Roaming\Typora\typora-user-images\image-20251222131607871.png" srcset="/img/loading.gif" lazyload alt="image-20251222131607871"></p>
+<h2 id="1-2-询问规范区"><a href="#1-2-询问规范区" class="headerlink" title="1.2 询问规范区"></a>1.2 询问规范区</h2><p><img src="/2025/12/12/12%E5%8F%B7%E6%B5%8B%E8%AF%95%E6%96%87%E7%AB%A0/%E6%B1%87%E6%80%BB/%E8%AF%A2%E9%97%AE%E8%A7%84%E8%8C%83%E5%8C%BA.png" srcset="/img/loading.gif" lazyload alt="询问规范区.png"></p>
 <p>接下来是询问规范区，一条一条支线进行分析。</p>
-<h3 id="1-2-1-恶意"><a href="#1-2-1-恶意" class="headerlink" title="1.2.1 恶意"></a>1.2.1 恶意</h3><h2 id="1-3-业务实现区"><a href="#1-3-业务实现区" class="headerlink" title="1.3 业务实现区"></a>1.3 业务实现区</h2><p><img src="C:\Users\JIAHAO\AppData\Roaming\Typora\typora-user-images\image-20251222131647431.png" srcset="/img/loading.gif" lazyload alt="image-20251222131647431"></p>
-<h2 id="1-4-输出变量整合区"><a href="#1-4-输出变量整合区" class="headerlink" title="1.4 输出变量整合区"></a>1.4 输出变量整合区</h2><p><img src="C:\Users\JIAHAO\AppData\Roaming\Typora\typora-user-images\image-20251222131721684.png" srcset="/img/loading.gif" lazyload alt="image-20251222131721684"></p>
+<h3 id="1-2-1-恶意"><a href="#1-2-1-恶意" class="headerlink" title="1.2.1 恶意"></a>1.2.1 恶意</h3><h2 id="1-3-业务实现区"><a href="#1-3-业务实现区" class="headerlink" title="1.3 业务实现区"></a>1.3 业务实现区</h2><p><img src="/2025/12/12/12%E5%8F%B7%E6%B5%8B%E8%AF%95%E6%96%87%E7%AB%A0/%E6%B1%87%E6%80%BB/%E4%B8%9A%E5%8A%A1%E5%AE%9E%E7%8E%B0%E5%8C%BA.png" srcset="/img/loading.gif" lazyload alt="业务实现区"></p>
+<h2 id="1-4-输出变量整合区"><a href="#1-4-输出变量整合区" class="headerlink" title="1.4 输出变量整合区"></a>1.4 输出变量整合区</h2><p><img src="/2025/12/12/12%E5%8F%B7%E6%B5%8B%E8%AF%95%E6%96%87%E7%AB%A0/%E6%B1%87%E6%80%BB/%E8%BE%93%E5%87%BA%E5%8F%98%E9%87%8F%E6%95%B4%E5%90%88%E5%8C%BA.png" srcset="/img/loading.gif" lazyload alt="输出变量整合区"></p>
 
   </div>
 
