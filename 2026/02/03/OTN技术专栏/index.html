@@ -1,0 +1,696 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-CN" data-default-color-scheme=auto>
+
+
+
+<head>
+  <meta charset="UTF-8">
+
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/fluid.png">
+  <link rel="icon" href="/img/fluid.png">
+  
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="author" content="JHao">
+  <meta name="keywords" content="">
+  
+    <meta name="description" content="OTN技术与原理全光网络  光网络最重要的优点是它的开放性。全光网络本质上是完全透明的，即对不同速率、协议、调制频率和制式的信号同时兼容，并允许几代设备（PDH&#x2F;SDH&#x2F;ATM）共存于同一个光纤基础网络中。  发展历史  国际上曾经按电的时分多路复用（TDM）原则，制订了数字系列标准。最基本的是以30～32路电话为一群，按每路数字话音信号64 kbit&#x2F;s设计，30～">
+<meta property="og:type" content="article">
+<meta property="og:title" content="关于">
+<meta property="og:url" content="https://jeahal.github.io/2026/02/03/OTN%E6%8A%80%E6%9C%AF%E4%B8%93%E6%A0%8F/index.html">
+<meta property="og:site_name" content="JHao">
+<meta property="og:description" content="OTN技术与原理全光网络  光网络最重要的优点是它的开放性。全光网络本质上是完全透明的，即对不同速率、协议、调制频率和制式的信号同时兼容，并允许几代设备（PDH&#x2F;SDH&#x2F;ATM）共存于同一个光纤基础网络中。  发展历史  国际上曾经按电的时分多路复用（TDM）原则，制订了数字系列标准。最基本的是以30～32路电话为一群，按每路数字话音信号64 kbit&#x2F;s设计，30～">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://jeahal.github.io/2025/12/12/12%E5%8F%B7%E6%B5%8B%E8%AF%95%E6%96%87%E7%AB%A0/WDM-ODM.png">
+<meta property="og:image" content="https://jeahal.github.io/2025/12/12/12%E5%8F%B7%E6%B5%8B%E8%AF%95%E6%96%87%E7%AB%A0/%E6%B3%A2%E6%AE%B5%E5%88%92%E5%88%86.png">
+<meta property="article:published_time" content="2026-02-03T00:24:32.000Z">
+<meta property="article:modified_time" content="2026-03-09T08:59:11.145Z">
+<meta property="article:author" content="JHao">
+<meta property="article:tag" content="技术">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://jeahal.github.io/2025/12/12/12%E5%8F%B7%E6%B5%8B%E8%AF%95%E6%96%87%E7%AB%A0/WDM-ODM.png">
+  
+  
+    <meta name="referrer" content="no-referrer-when-downgrade">
+  
+  
+  <title>关于 - JHao</title>
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
+
+
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/github-markdown-css/4.0.0/github-markdown.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/hint.css/2.7.0/hint.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.css" />
+
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+<!-- Do not modify the link that theme dependent icons -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/c/font_1749284_5i9bdhy70f8.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/c/font_1736178_k526ubmyhba.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+
+  <link id="highlight-css" rel="stylesheet" href="/css/highlight.css" />
+  
+    <link id="highlight-css-dark" rel="stylesheet" href="/css/highlight-dark.css" />
+  
+
+
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    Fluid.ctx = Object.assign({}, Fluid.ctx)
+    var CONFIG = {"hostname":"jeahal.github.io","root":"/","version":"1.9.8","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":true,"follow_dnt":true,"baidu":null,"google":{"measurement_id":null},"tencent":{"sid":null,"cid":null},"leancloud":{"app_id":"MzD5ZeFinduxSaELnQ5Wann7-gzGzoHsz","app_key":"khgLyuqrvaK3VWK6odLXeMPY","server_url":null,"path":"window.location.pathname","ignore_local":false},"umami":{"src":null,"website_id":null,"domains":null,"start_time":"2024-01-01T00:00:00.000Z","token":null,"api_server":null}},"search_path":"/local-search.xml","include_content_in_search":true};
+
+    if (CONFIG.web_analytics.follow_dnt) {
+      var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
+      Fluid.ctx.dnt = dntVal && (dntVal.startsWith('1') || dntVal.startsWith('yes') || dntVal.startsWith('on'));
+    }
+  </script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+  
+
+
+
+  
+<meta name="generator" content="Hexo 7.3.0"></head>
+
+
+<body>
+  
+
+  <header>
+    
+
+<div class="header-inner" style="height: 60vh;">
+  <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand" href="/">
+      <strong>JHao</strong>
+    </a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/" target="_self">
+                <i class="iconfont icon-home-fill"></i>
+                <span>首页</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/" target="_self">
+                <i class="iconfont icon-archive-fill"></i>
+                <span>归档</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/" target="_self">
+                <i class="iconfont icon-category-fill"></i>
+                <span>分类</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/" target="_self">
+                <i class="iconfont icon-tags-fill"></i>
+                <span>标签</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/" target="_self">
+                <i class="iconfont icon-user-fill"></i>
+                <span>关于</span>
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" target="_self" href="javascript:;" data-toggle="modal" data-target="#modalSearch" aria-label="Search">
+              <i class="iconfont icon-search"></i>
+            </a>
+          </li>
+          
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" target="_self" href="javascript:;" aria-label="Color Toggle">
+              <i class="iconfont icon-dark" id="color-toggle-icon"></i>
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+  
+
+<div id="banner" class="banner" parallax=true
+     style="background: url('/img/default.png') no-repeat center center; background-size: cover;">
+  <div class="full-bg-img">
+    <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+      <div class="banner-text text-center fade-in-up">
+        <div class="h2">
+          
+            <span id="subtitle" data-typed-text="关于"></span>
+          
+        </div>
+
+        
+          
+  <div class="mt-3">
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-author" aria-hidden="true"></i>
+        JHao
+      </span>
+    
+    
+      <span class="post-meta">
+        <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+        <time datetime="2026-02-03 08:24" pubdate>
+          2026年2月3日 早上
+        </time>
+      </span>
+    
+  </div>
+
+  <div class="mt-1">
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-chart"></i>
+        
+          4.3k 字
+        
+      </span>
+    
+
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-clock-fill"></i>
+        
+        
+        
+          36 分钟
+        
+      </span>
+    
+
+    
+    
+      
+        <span id="leancloud-page-views-container" class="post-meta" style="display: none">
+          <i class="iconfont icon-eye" aria-hidden="true"></i>
+          <span id="leancloud-page-views"></span> 次
+        </span>
+        
+      
+      
+    
+  </div>
+
+
+        
+      </div>
+
+      
+    </div>
+  </div>
+</div>
+
+</div>
+
+  </header>
+
+  <main>
+    
+      
+
+<div class="text-center">
+  <div class="about-info">
+    <div class="about-name">Fluid</div>
+    <div class="about-intro">An elegant theme for Hexo</div>
+    <div class="about-icons">
+      
+        
+        
+        
+        <a href=https://github.com class="
+           hint--bottom hint--rounded"
+           aria-label="GitHub"
+           target="_blank"
+        >
+          <i class="iconfont icon-github-fill" aria-hidden="true"></i>
+          
+        </a>
+      
+        
+        
+        
+        <a href=https://douban.com class="
+           hint--bottom hint--rounded"
+           aria-label="豆瓣"
+           target="_blank"
+        >
+          <i class="iconfont icon-douban-fill" aria-hidden="true"></i>
+          
+        </a>
+      
+        
+        
+        
+        <a  class="qr-trigger
+           "
+           
+           target="_self"
+        >
+          <i class="iconfont icon-wechat-fill" aria-hidden="true"></i>
+          
+            <img class="qr-img" src="/img/favicon.png" srcset="/img/loading.gif" lazyload alt="qrcode" />
+          
+        </a>
+      
+    </div>
+  </div>
+</div>
+
+<article class="about-content page-content mt-5">
+  <div class="markdown-body">
+    <h1 id="OTN技术与原理"><a href="#OTN技术与原理" class="headerlink" title="OTN技术与原理"></a>OTN技术与原理</h1><p>全光网络</p>
+<blockquote>
+<p>光网络最重要的优点是它的开放性。全光网络本质上是完全透明的，即对不同速率、协议、调制频率和制式的信号同时兼容，并允许几代设备（PDH&#x2F;SDH&#x2F;ATM）共存于同一个光纤基础网络中。</p>
+</blockquote>
+<p>发展历史</p>
+<blockquote>
+<p>国际上曾经按电的时分多路复用（TDM）原则，制订了数字系列标准。最基本的是以30～32路电话为一群，按每路数字话音信号64 kbit&#x2F;s设计，30～32路数字电话的速率共约2 Mbit&#x2F;s，这样就成为基本的数字群。</p>
+<p>样把电的数字信号按4个低级群组成1个高级群的原则，称为准同步&#x2F;同步数字系列（PDH&#x2F;SDH）。</p>
+<p>Plesiochronous Digital Hierarchy</p>
+<p>迄今，电的TDM似乎限于10Gbit&#x2F;s以下，个别实验室曾做成4×40 Gbit&#x2F;s&#x3D;160 Gbit&#x2F;s，再高就有一定困难。因此，电的多路数字信号利用TDM技术所能达到的实用化数字速率，在最近期间只能以40 Gbit&#x2F;s为限度。</p>
+<p>(点的最高10Gbit左右)</p>
+<p>采用WDM技术后，可以使容量迅速扩大几倍至几百倍；由于光放大器的出现，电再生距离从传统SDH的40～80 km增加到400～600 km，甚至达到10 000 km，节约了大量光纤和电再生器，大大降低了传输成本。</p>
+<p>传统的点到点WDM系统在结构上十分简单，可以提供大量的原始带宽。然而，传统WDM系统每隔400～600km仍然需要电再生，随着用户电路长度的增加，必须配置大量背靠背的电再生器，系统成本迅速上升。</p>
+<p>传统WDM结构要求每一个方向的每一个WDM通路都实施物理终结，靠手工进行大量光纤跳线的互连，造成高额终结成本和运行成本。</p>
+<p>在传输节点处引入灵活光节点，实现光层联网，构筑所谓的光传送网乃至自动交换光网络（ASON），即实现从传统WDM走向OTN和ASON的转变和升级。</p>
+<p>它的基本思想是将点到点的波分复用系统用光交叉（Optical Cross-connector，OXC）互连节点和光分插复用（Optical Add&#x2F;Drop Multiplexer，OADM）节点连接起来，组成光传送网。</p>
+<p>（全光结构，电只负责供能）</p>
+<p>于是光分插复用器（OADM）成为灵活组网的必须设备，构成WDM网的一部分。此时的WDM网开始具有简单的光层联网功能，在中间站，节点可以根据组网的需要插入或分出一组选择的波长。此外，由于消除了光电变换，网络成本降低。</p>
+<p>WDM网开始演变为光联网，ITU-T称之为光传送网。光传送网就是在光层面上实现类似SDH在电层面上的联网功能。光传送网由一组可以为客户层信号提供主要在光域上进行传送、复用、选路、监控和生存性处理的功能实体所构成，其中OXC是光层联网的核心。</p>
+<p>WDM技术是将多波长信号在光纤线路上进行传输的技术，属于线路技术。OTN技术是在WDM的基础上，增加了在节点处理光波长信号和电信号功能的技术，属于节点技术。</p>
+<p>（WDM波分复用，传输；OTN节点处理光电信号，节点技术）</p>
+</blockquote>
+<p><img src="/2025/12/12/12%E5%8F%B7%E6%B5%8B%E8%AF%95%E6%96%87%E7%AB%A0/WDM-ODM.png" srcset="/img/loading.gif" lazyload alt="WDM-ODM技术差别"></p>
+<blockquote>
+<p>无法在光域上增加开销对信号进行监视，管理和维护还必须依靠电信号进行。</p>
+<p>因此全光网出现了一些挫折，不能组成全球性&#x2F;全国性的大网以实现全网内的波长调度和传输，而仅能组成一个有限区域的子网，在子网内透明传输和处理。</p>
+<p>由于OTN是作为网络技术来开发的，许多SDH传送网的功能和体系原理都可以仿效，包括帧结构、功能模型、网络管理、信息模型、性能要求、物理层接口等系列建议。</p>
+<p>AON-&gt;OTN(光传送网)-&gt;ASON</p>
+<p>狭义的OTN是特指基于G.872的光传送网，它仅仅是一个传送平面，必须加上管理平面才能进行配置、监控、运行维护管理，这和电层网络是相似的。在OTN传送平面和管理平面的基础上，如果再加上控制平面，及能为管理平面与控制平面的信息提供传送的网络（DCN），则OTN就发展到其高级形式——自动交换光网络（Automatically Switched Optical Network，ASON），即基于OTN的ASON。</p>
+<p>软件定义网络（SDN）的概念在IP网中出现.</p>
+</blockquote>
+<p><img src="/2025/12/12/12%E5%8F%B7%E6%B5%8B%E8%AF%95%E6%96%87%E7%AB%A0/%E6%B3%A2%E6%AE%B5%E5%88%92%E5%88%86.png" srcset="/img/loading.gif" lazyload alt="波段划分"></p>
+<blockquote>
+<p>OTN在光层分为光通道层、光复用段层、光传输段层。目前这三层都相应地引入了光通道层保护（包括波长保护和路由保护）、光复用段层保护、光传输段层保护。</p>
+<p>传送平面、控制平面、管理平面</p>
+<p>(物理光机)（虚拟平台注册）（网管平台）</p>
+</blockquote>
+<p>管理平台</p>
+<blockquote>
+<p>正因其地位重要，该接口必须有明确规范。该接口需要规范的主要内容有每个用户端点的连接建立请求速率、连接请求参数、光通道端点的寻址方案、光通道客户的命名方案、保护需求的规范、安全参数和响应时间等。</p>
+</blockquote>
+<p>POTN</p>
+<blockquote>
+<p>IP技术由于简单且价廉的特点，在与ATM技术及其他分组技术的竞争中胜出，因此IP技术成了分组交换技术的主要形式。现在，当人们谈到分组交换技术时，实际上指的就是IP技术；当人们谈到分组化时，实际上指的就是IP化。</p>
+<p>承载网变化</p>
+<p>从SDH到MSTP的演变</p>
+<p>但随着分组业务量的增加，SDH承载分组业务时效率低下、成本高的弊端就明显地体现出来，人们不得不对SDH技术进行改进。</p>
+<p>(SDH电路交换）</p>
+<p>基于SDH的多业务传送MSTP技术（又称为新一代SDH）标准问世，使得SDH也能支持分组业务，适应了业务分组化的大趋势。</p>
+<p>MSTP（多业务传送平台）</p>
+<p>核心依托 SDH 的同步传输、高可靠性、标准化帧结构和强大网管能力，同时融合分组交换、以太网交换等技术，实现多业务的统一承载。</p>
+<p>主要是为了解决分组交换问题。</p>
+<p>承载网从MSTP到PTN的演变</p>
+<p>MSTP是改进了的SDH，虽然可以传送分组业务，但毕竟内核仍是电路交换。电路交换的最大特点，表现为用户对通信资源占用的排他性（或独占性）。通信网络一旦为用户分配了电路，即便用户处于“无话可说”的静默状态，在没有信息需要传送时，该电路也不能被其他用户利用。统计表明，一般情况下，分配给用户的信道，40%以上的电路资源都处于空闲状态。</p>
+<p>PTN:业界推出的内核为分组交换的承载技术统称为分组传送网</p>
+<p>PTN（MPLS-TP）是一种基于传输平台、核心是分组交换、面向连接的多业务传送技术，增加了L2和必要的L3功能。(链路层 + 网络层)</p>
+<p>PTN支持电信级的OAM功能，具备分层和分域能力，可以提供良好的扩展性，还具备基于分组的QoS机制。PTN还具有丰富的保护倒换技术，便于与现有传输网互联互通和演进。同时PTN支持分组网络环境的时钟同步和时间同步技术，是一种很有发展前景的城域网技术。</p>
+<p>（讲的TP技术就是PTN技术，核心是交换）</p>
+<p>IPRAN :基于路由器交换</p>
+<p>为传送网主流技术的OTN，也就走上了向分组化演进的道路，从而诞生了分组OTN（POTN），业界把经过改进后、能承载多种业务的分组OTN称为分组增强型光传送网。</p>
+<p>（POTN即面向分组的光传送网）</p>
+<p>城域网流量和骨干网流量占比达到3∶1。（传统WDM的OTN被用在骨干网）</p>
+<p>但IP在上灵活调度，OTN在下管道传输，采用叠加方式组网，仍然是两张独立的网络，层次仍然不够简化，不能适应网络扁平化的需求。那么将PTN的功能融合到OTN中就成为必然的选择，POTN应运而生。</p>
+<p>融合了PTN功能的POTN既具有传统OTN的特点，又具有PTN处理分组业务和TDM业务的能力，被广泛用于城域网核心层。</p>
+<p>（传输骨干用：OTN，下城PTN,POTN是结合版）</p>
+<p>OTN设备可以描述为同时具备传统波分复用、电交叉（G.709定义的OTN形态）和分组功能的设备，即同时具备L0层、L1层和L2层功能的平台。</p>
+<p>批注（波分-&gt;物理层，电交叉-&gt;链路层，网络层-&gt;分组交换）</p>
+<p>POTN演进路程</p>
+<p>由于POTN设备融合了分组设备和OTN设备的功能，因此传送网向POTN演进可分为两条主要路线。一是在PTN设备上增加支持ODUk业务接入和交叉调度的板卡，并增加对彩光接口和波分复用的支持，从而演进到POTN设备。二是在OTN设备的基础上，开发支持分组业务接入和映射、调度，支持VC业务接入和映射、调度的支路板、线路板及交叉板卡，从而向POTN设备演进。</p>
+<p>板卡式POTN设备，通过在原OTN设备上开发具备分组功能的业务板卡来实现，客户侧分组信号在该种业务板卡上完成分组处理后，进行ODUk的封装，进而通过交叉单元实现交叉调度。</p>
+<p>集中交叉式POTN设备是将实现分组交换的功能在交叉板上实现，然后再经由线路板分装到ODUk容器中。该设备对于OTN业务和分组业务要求可以进行统一承载，因此业务板卡需要灵活可配置，需要开发混合支路和线路板卡。</p>
+<p>目前商用OTN设备单点时延一般在10～20μs之间，主要原因是为了覆盖多样化的业务场景（如承载多种业务、多种颗粒度），添加了很多非必要的映射、封装步骤，造成了时延大幅上升。</p>
+<p>映射复用</p>
+<p>每一级复用，时延增加512ns。</p>
+<p>网络切片承载方案</p>
+<p>基于一层网络切片承载方案主要基于ODUflex进行网络资源划分，可以将不同的ODUflex带宽通过通道标识划分来承载不同的5G网络切片，并可根据业务流量的变化动态无损调整ODUflex的带宽。</p>
+<p>（物理隔离，不相互影响）</p>
+<p>基于二层网络切片承载方案通过MPLS-TP标签或以太网VLAN ID。划分隔离二层端口带宽资源，即逻辑隔离。采用不同的逻辑通道承载不同的5G网络切片，同时通过QoS控制策略来满足不同网络切片的带宽、时延和丢包率等性能需求。（逻辑隔离）</p>
+<p>光层WSON（Wavelength Switched Optical Network，波长交换光网络）通过ROADM在现有光层路径实现重路由，抵抗多次断纤；电层ASON通过OTN电交叉备份能够迅速倒换保护路径，保护时间小于50 ms。</p>
+<p>（ROADM光层；ASON电交叉）</p>
+<p>全光网</p>
+<p>全光网络由光传输系统和在光域内进行交换&#x2F;选路的光节点组成，光传输系统的容量和光节点的处理能力非常大，电子处理通常在边缘网络进行，边缘网络中的节点或节点系统可采用光通道与光网络进行直接连接。光节点不进行按信元或按数据包的电子处理，因而具有很大的吞吐量，可大大地降低传输延迟。不同类型的信号可以直接接入光网络。光网络具有光通道的保护能力，以保证网络传输的可靠性。</p>
+<p>全光网络主要由核心网、城域网和接入网三层组成。</p>
+<p>因此现有的分组光交换单元还要由电信号来控制，即所谓的电控光交换。它所完成的关键工作就是波长变换。由于实质上是对光的波长进行处理，所以光交换&#x2F;光路由应该称为波长交换&#x2F;波长路由。</p>
+<p>光纤交叉连接、波长交叉连接和波长变换交叉连接。其中，光纤交叉连接以一根光纤上所有波长的总容量为基础进行交叉连接，容量大但不灵活。</p>
+<p>波长交叉连接可将任何光纤上的任何波长交叉连接到使用相同波长的任何光纤上，比如，波长λ1、λ2、λ3和λ4从输入端1号光纤输入，波长交叉连接可以将这4个波长选路到输出端口的1、2、3和4号光纤上去，它的波长可以通过空间分割实现重用。波长的选路路由由内部交叉矩阵决定，一个N×N的交叉矩阵可以同时建立N2条路由。</p>
+<p>波长变换交叉连接可将任何光纤上的任何波长交叉连接到使用不同波长的任何光纤上，具有最高的灵活性。它和波长交叉连接的区别是可以进行波长转换。（可以换波长）</p>
+<p>OXC的光交换单元可采用两种基本交换机制：空间交换和波长交换。</p>
+<p>全光</p>
+<p>因此，必须采取措施对光信号进行再生。目前，对光信号的再生都是利用光电中继器，即光信号首先由光电二极管转变为电信号，经电路整形放大后，再重新驱动一个光源，从而实现光信号的再生。</p>
+<p>而全光中继是在光纤链路上每隔几个放大器的距离接入一个光调制器和滤波器，从链路传输的光信号中提取同步时钟信号输入光调制器中，对光信号进行周期性同步调制，使光脉冲变窄、频谱展宽、频率漂移和系统噪声降低，光脉冲位置得到校准和重新定时。</p>
+<p>光分差复用</p>
+<p>给定一个网络的物理拓扑和一套需要在网络上建立的端到端光信道，而为每一个带宽请求决定路由和分配波长以建立光信道的问题也就是波长选路由和波长分配问题。</p>
+<p>其中光通道层既包含电层信号的处理，又包含电层信号加载到波长通道的处理，但这种处理在原分层结构上体现得并不明显。</p>
+<p>LCAS</p>
+<p>G.7042建议定义了虚级联信号的链路容量调整方案（LCAS），采用虚级联技术增加或减少OTN网络中的容量。如果网络中一个单元出现失效，可以自动减少容量。当网络修复完成后，可以自动增加容量。</p>
+</blockquote>
+<p>OTN光电层分析</p>
+<blockquote>
+<p>随路开销（管理开销）、非随路开销</p>
+<p>OMS</p>
+<p>光复用段从多波长合波之后算起，到多波长分波之前结束</p>
+<p>光传输段的作用是给光复用段提供传输功能。</p>
+<p>光传输段从光放大器的输出端算起，到下一个光放大器之前结束。</p>
+<p>（偏物理层）</p>
+<p>光物理段是一个在不同的光媒质上提供多波长光信号传输功能的层网络。</p>
+<p>电层的主要功能是实现对客户信号的映射以及对ODUk的时分复用，形成OTU[V]；光层的主要功能是将电信号OTU[V]加载到波长上，并进行波分复用，再加载光层的非关联开销，最后形成光接口信号。</p>
+<p>MSI</p>
+<p>OMS-MSI是一个向下游传送的指示信号，用来检测源端和宿端OCh-P&#x2F;OTSiG复用结构的配置是否失配。下游指示信号。</p>
+<p>BDI：ODUK后向缺陷指示</p>
+<p>BEI: PM后向误码指示</p>
+<p>ODU串联连接监视开销：ODU的6个串联连接监视开销位于ODU开销的第2行第5～13列和第3行第1～9列；还在第2行第3列定义了6个TCM比特，用于延时测量。</p>
+<p>OPU净荷结构标识（PSI）</p>
+<p>告警指示信号（Alarm Indication Signal，AIS）是一个用来向下游传送在上游已经检测到缺陷的指示信号。</p>
+<p>断开连接指示（Open Connection Indication，OCI）是一个向下游传送的指示信号，指示上游信号没有与路径终端源连接。</p>
+</blockquote>
+
+  </div>
+
+  
+    <!-- Comments -->
+    <article id="comments" lazyload>
+      
+      
+        
+      
+      
+
+    </article>
+  
+</article>
+
+
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+
+
+    
+
+    
+      <a id="scroll-top-button" aria-label="TOP" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v" for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    
+
+    
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+  
+    <div class="footer-content">
+       <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> 
+    </div>
+  
+  
+    <div class="statistics">
+  
+  
+
+  
+    
+      <span id="busuanzi_container_site_pv" style="display: none">
+        总访问量 
+        <span id="busuanzi_value_site_pv"></span>
+         次
+      </span>
+    
+    
+      <span id="busuanzi_container_site_uv" style="display: none">
+        总访客数 
+        <span id="busuanzi_value_site_uv"></span>
+         人
+      </span>
+    
+    
+
+  
+
+</div>
+
+  
+  
+</div>
+
+  </footer>
+
+  <!-- Scripts -->
+  
+  <script  src="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://lib.baomitu.com/jquery/3.6.4/jquery.min.js" ></script>
+<script  src="https://lib.baomitu.com/twitter-bootstrap/4.6.1/js/bootstrap.min.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+
+  <script  src="https://lib.baomitu.com/typed.js/2.0.12/typed.min.js" ></script>
+  <script>
+    (function (window, document) {
+      var typing = Fluid.plugins.typing;
+      var subtitle = document.getElementById('subtitle');
+      if (!subtitle || !typing) {
+        return;
+      }
+      var text = subtitle.getAttribute('data-typed-text');
+      
+        typing(text);
+      
+    })(window, document);
+  </script>
+
+
+
+
+  
+    <script  src="/js/img-lazyload.js" ></script>
+  
+
+
+
+
+  <script src=https://lib.baomitu.com/clipboard.js/2.0.11/clipboard.min.js></script>
+
+  <script>Fluid.plugins.codeWidget();</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/anchor-js/5.0.0/anchor.min.js', function() {
+    window.anchors.options = {
+      placement: CONFIG.anchorjs.placement,
+      visible  : CONFIG.anchorjs.visible
+    };
+    if (CONFIG.anchorjs.icon) {
+      window.anchors.options.icon = CONFIG.anchorjs.icon;
+    }
+    var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+    var res = [];
+    for (var item of el) {
+      res.push('.markdown-body > ' + item.trim());
+    }
+    if (CONFIG.anchorjs.placement === 'left') {
+      window.anchors.options.class = 'anchorjs-link-left';
+    }
+    window.anchors.add(res.join(', '));
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('anchors' in window) {
+        anchors.removeAll();
+        var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+        var res = [];
+        for (var item of el) {
+          res.push('.markdown-body > ' + item.trim());
+        }
+        if (CONFIG.anchorjs.placement === 'left') {
+          anchors.options.class = 'anchorjs-link-left';
+        }
+        anchors.add(res.join(', '));
+      }
+    });
+  });
+</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.js', function() {
+    Fluid.plugins.fancyBox();
+  });
+</script>
+
+
+  <script>Fluid.plugins.imageCaption();</script>
+
+  <script defer src="/js/leancloud.js" ></script>
+
+  <script  src="/js/local-search.js" ></script>
+
+  <script defer src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js" ></script>
+
+
+
+
+
+<!-- 主题的启动项，将它保持在最底部 -->
+<!-- the boot of the theme, keep it at the bottom -->
+<script  src="/js/boot.js" ></script>
+
+
+  
+
+  <noscript>
+    <div class="noscript-warning">博客在允许 JavaScript 运行的环境下浏览效果更佳</div>
+  </noscript>
+</body>
+</html>
